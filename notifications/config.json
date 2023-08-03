@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "TRR Example Notification Project",
+    "environment": "dev",
+    "comment": "example comment",
+    "reportLink": "https://jenkins.autotests.cloud",
+    "language": "en",
+    "allureFolder": "build/reports/allure-report/allureReport/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6538105031:AAGat19RYF238y3orWFDp3PZt6S3x7y1UP4",
+    "chat": "-1001904254055",
+    "replyTo": ""
+  }
+}
