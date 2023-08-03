@@ -1,5 +1,6 @@
 package helpers;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import config.WebDriverConfig;
 import io.qameta.allure.Attachment;
@@ -47,8 +48,8 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String remoteUrl = WebDriverProvider.config.getRemoteUrl();
-        String videoUrl = remoteUrl + "video/" + sessionId() + ".mp4";
+        String videoUrl = "http://95.216.214.178:8080/video/" + sessionId() + ".mp4";
+
         try {
             return new URL(videoUrl);
         } catch (MalformedURLException e) {
