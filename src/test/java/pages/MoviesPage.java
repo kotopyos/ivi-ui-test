@@ -6,6 +6,7 @@ import pages.components.SuggestionListComponent;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -18,7 +19,7 @@ public class MoviesPage {
 
     @Step("Open Movies page via direct adress")
     public MoviesPage openMoviesPage(){
-        open("/movies");
+        open(baseUrl + "/movies");
         return this;
     }
 

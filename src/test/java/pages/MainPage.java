@@ -3,6 +3,7 @@ package pages;
 import io.qameta.allure.Step;
 import pages.components.HeaderTopComponent;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
@@ -10,7 +11,7 @@ public class MainPage {
 
     @Step("Open Main page")
     public MainPage openMainPage(){
-        open("https://www.ivi.ru");
+        open(baseUrl);
 
         return this;
     }
