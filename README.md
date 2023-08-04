@@ -52,7 +52,7 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
 - Настроить интеграцию с Jira
 - Добавлять ручные тесты и т.д
 
-![This is an image](images/screenshots/allure_suites_screenshot.png)
+![This is an image](images/screenshots/allure_testops_suites_screenshot.png)
 
 
 <!-- Telegram -->
