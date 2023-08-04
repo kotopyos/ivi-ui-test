@@ -23,7 +23,7 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
 
 <!-- Allure report -->
 
-### <img width="5%" title="Allure Report" src="images/logos/allure_report.png"> Allure report
+### <img width="5%" title="Allure Report" src="images/logos/Allure_Report.png"> Allure report
 ### [Report](https://jenkins.autotests.cloud/job/c20-Stayarr-ivi-ui-tests/allure/)
 ##### После прохождения тестов, результаты можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins
 ![This is an image](images/screenshots/allure_dashboard_screenshot.png)
@@ -35,7 +35,7 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
 ![This is an image](images/screenshots/allure_suites_screenshot.png)
 
 ##### Видео прохождение теста
-![This is an image](images/screenshots/images/screenshots/test_ui.gif)
+![This is an image](images/screenshots/test_ui.gif)
 
 <!-- Allure TestOps -->
 
