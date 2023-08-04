@@ -35,8 +35,8 @@ public class Tests extends TestBase {
     @DisplayName("Genres filter using carousel")
     void genresFilterUsingCarouselTest(){
         moviesPage.openMoviesPage()
-                .setGenreViaFilterCarousel(data.boeviki, data.trilleri, "Драмы", "Приключения", "Комедии") //todo add javafaker+selection randomizer
-                .verifyParamsFilterAppears(data.boeviki, data.trilleri, "Драмы", "Приключения", "Комедии");
+                .setGenreViaFilterCarousel(data.boeviki, data.trilleri, data.drami, data.priklucheniya, data.komedii)
+                .verifyParamsFilterAppears(data.boeviki, data.trilleri, data.drami, data.priklucheniya, data.komedii);
     }
     @Test
     @Feature("Movies page")
@@ -46,8 +46,8 @@ public class Tests extends TestBase {
     @DisplayName("Genres filter using list")
     void genresFilterUsingListTest(){
         moviesPage.openMoviesPage()
-                .setGenreViaFilterList(data.boeviki, data.trilleri, "Драмы", "Приключения", "Комедии") //todo add javafaker+selection randomizer
-                .verifyParamsFilterAppears(data.boeviki, data.trilleri, "Драмы", "Приключения", "Комедии");
+                .setGenreViaFilterList(data.boeviki, data.trilleri, data.drami, data.priklucheniya, data.komedii)
+                .verifyParamsFilterAppears(data.boeviki, data.trilleri, data.drami, data.priklucheniya, data.komedii);
     }
 
     @Test
@@ -58,8 +58,8 @@ public class Tests extends TestBase {
     @DisplayName("Sausage list filter")
     void sausageListFilterTest(){
         moviesPage.openMoviesPage()
-                .setSausageListOptions("По подписке", "На языке оригинала", "С субтитрами", "Объёмный звук")
-                .verifyParamsFilterAppears("По подписке", "На языке оригинала", "С субтитрами", "Объёмный звук");
+                .setSausageListOptions(data.poPodpiske, data.naYazikeOriginala, data.sSubtitrami, data.obiemniyZvuk)
+                .verifyParamsFilterAppears(data.poPodpiske, data.naYazikeOriginala, data.sSubtitrami, data.obiemniyZvuk);
 
     }
 

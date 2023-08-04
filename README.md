@@ -11,7 +11,13 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
 <!-- Тест кейсы -->
 
 ### Что проверяем
-* Проверка фитьтра на странице фильмов
+* Проверка фильтра фильмов:
+  * С помощью Suggestion list
+  * По рейтингу
+  * По жанру с помощью карусели
+  * По жанру с помощью списка
+  * С помощью Sausage list
+
 
 
 ### <img width="5%" title="Jenkins" src="images/logos/Jenkins.png"> Запуск проекта в Jenkins
