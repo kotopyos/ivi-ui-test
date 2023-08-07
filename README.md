@@ -4,10 +4,18 @@
 <a href="https://www.ivi.ru/"><img src="images/logos/ivi-logo.png"/></a>
 
 ## Проект реализован с использованием
-Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure TestOps Telegram
 
-![This is an image](/images/logos/Java.png)![This is an image](/images/logos/Gradle.png)![This is an image](/images/logos/Intelij_IDEA.png)![This is an image](/images/logos/Selenide.png)![This is an image](/images/logos/Selenoid.png)![This is an image](/images/logos/JUnit5.png)![This is an image](/images/logos/Jenkins.png)![This is an image](/images/logos/Allure_Report.png)![This is an image](/images/logos/AllureTestOps.png)![This is an image](/images/logos/Telegram.png)
-
+<p align="center">
+<a href="https://www.java.com/"><img src="images/logos/Java.svg" width="50" height="50"  alt="Java"/></a>
+<a href="https://junit.org/junit5/"><img src="images/logos/JUnit5.svg" width="50" height="50"  alt="JUnit5"/></a>
+<a href="https://gradle.org/"><img src="images/logos/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
+<a href="https://selenide.org/"><img src="images/logos/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="images/logos/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="images/logos/Allure.svg" width="50" height="50"  alt="Allure"/></a>
+<a href="https://www.jenkins.io/"><img src="images/logos/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a><img src="images/logos/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>
+<a><img src="images/logos/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
+</p>
 <!-- Тест кейсы -->
 
 ### Что проверяем
@@ -18,9 +26,20 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
   * По жанру с помощью списка
   * С помощью Sausage list
 
+## Запуск тестов из терминала
+Локальный запуск:
+```
+gradle clean ui_test -Denv=local
+```
 
+Удаленный запуск:
+```
+clean
+ui_test
+-Denv=${remote}
+```
 
-### <img width="5%" title="Jenkins" src="images/logos/Jenkins.png"> Запуск проекта в Jenkins
+### <img width="5%" title="Jenkins" src="images/logos/Jenkins.svg"> Запуск проекта в Jenkins
 
 ### [Job](https://jenkins.autotests.cloud/job/c20-Stayarr-ivi-ui-tests/)
 
@@ -29,7 +48,7 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
 
 <!-- Allure report -->
 
-### <img width="5%" title="Allure Report" src="images/logos/Allure_Report.png"> Allure report
+### <img width="5%" title="Allure Report" src="images/logos/Allure.svg"> Allure report
 ### [Report](https://jenkins.autotests.cloud/job/c20-Stayarr-ivi-ui-tests/allure/)
 ##### После прохождения тестов, результаты можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins
 ![This is an image](images/screenshots/allure_dashboard_screenshot.png)
@@ -45,7 +64,7 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
 
 <!-- Allure TestOps -->
 
-### <img width="5%" title="Allure TestOps" src="images/logos/AllureTestOps.png"> Интеграция с Allure TestOps
+### <img width="5%" title="Allure TestOps" src="images/logos/Allure_TO.svg"> Интеграция с Allure TestOps
 
 ### [Dashboard](https://allure.autotests.cloud/project/3608/dashboards)
 
@@ -63,7 +82,7 @@ Java Gradle IntelliJ IDEA Selenide Selenoid JUnit5 Jenkins Allure Report Allure 
 
 <!-- Telegram -->
 
-### <img width="5%" title="Telegram" src="images/logos/Telegram.png"> Интеграция с Telegram
+### <img width="5%" title="Telegram" src="images/logos/Telegram.svg"> Интеграция с Telegram
 ##### После прохождения тестов, в Telegram bot приходит сообщение с графиком и небольшой информацией о тестах.
 
 ![This is an image](images/screenshots/tg_bot_schreenshot.png)
