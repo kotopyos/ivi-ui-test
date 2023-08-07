@@ -34,9 +34,7 @@ gradle clean test -Denv=local
 
 Удаленный запуск:
 ```
-clean
-test
--Denv=${remote}
+gradle clean test -Denv=${remote}
 ```
 
 ### <img width="5%" title="Jenkins" src="images/logos/Jenkins.svg"> Запуск проекта в Jenkins
