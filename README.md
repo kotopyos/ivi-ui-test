@@ -29,13 +29,13 @@
 ## Запуск тестов из терминала
 Локальный запуск:
 ```
-gradle clean ui_test -Denv=local
+gradle clean test -Denv=local
 ```
 
 Удаленный запуск:
 ```
 clean
-ui_test
+test
 -Denv=${remote}
 ```
 
