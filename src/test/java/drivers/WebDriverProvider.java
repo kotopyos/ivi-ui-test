@@ -1,6 +1,7 @@
-package config;
+package drivers;
 
 import com.codeborne.selenide.Configuration;
+import configs.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.remote.DesiredCapabilities;
 

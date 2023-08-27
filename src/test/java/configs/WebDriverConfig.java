@@ -1,8 +1,8 @@
-package config;
+package configs;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:${env}.properties"})
+@Config.Sources({"classpath:config/web/${env}.properties"})
 
 public interface WebDriverConfig extends Config {
 

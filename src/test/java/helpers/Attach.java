@@ -1,13 +1,9 @@
 package helpers;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import config.WebDriverConfig;
 import io.qameta.allure.Attachment;
-import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import config.WebDriverProvider;
 
 import java.net.MalformedURLException;
 import java.net.URL;

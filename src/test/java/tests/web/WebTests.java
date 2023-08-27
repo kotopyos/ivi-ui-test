@@ -1,19 +1,21 @@
-package tests;
+package tests.web;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.TestBase;
 
-@Tag("remote")
-public class Tests extends TestBase {
+@Tag("web")
+@Owner("staya_kotyat")
+@Feature("Movies page")
+@DisplayName("Movies page")
+public class WebTests extends TestBase {
 
     @Test
     @Disabled("Issue is TBD")
-    @Feature("Movies page")
     @Story("Movies filter")
-    @Owner("staya_kotyat")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Suggestion list filter")
     void suggestionListTest(){
@@ -28,9 +30,7 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @Feature("Movies page")
     @Story("Movies filter")
-    @Owner("staya_kotyat")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Genres filter using carousel")
     void genresFilterUsingCarouselTest(){
@@ -39,9 +39,7 @@ public class Tests extends TestBase {
                 .verifyParamsFilterAppears(data.boeviki, data.trilleri, data.drami, data.priklucheniya, data.komedii);
     }
     @Test
-    @Feature("Movies page")
     @Story("Movies filter")
-    @Owner("staya_kotyat")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Genres filter using list")
     void genresFilterUsingListTest(){
@@ -51,9 +49,7 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @Feature("Movies page")
     @Story("Movies filter")
-    @Owner("staya_kotyat")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Sausage list filter")
     void sausageListFilterTest(){
@@ -65,9 +61,7 @@ public class Tests extends TestBase {
 
 
     @Test
-    @Feature("Movies page")
     @Story("Movies filter")
-    @Owner("staya_kotyat")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Rating filter")
     void ratingFilterTest(){
