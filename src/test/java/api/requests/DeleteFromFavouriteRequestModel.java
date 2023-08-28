@@ -1,9 +1,9 @@
-package api.models;
+package api.requests;
 
 import lombok.Data;
 
 @Data
-public class DeleteFromFavouriteModel {
+public class DeleteFromFavouriteRequestModel {
         Integer id;
         String session;
 }
