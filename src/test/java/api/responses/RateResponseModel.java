@@ -3,7 +3,6 @@ package api.responses;
 import lombok.Data;
 
 @Data
-public class AddToFavouriteResponeModel {
+public class RateResponseModel {
     String result;
-
 }
