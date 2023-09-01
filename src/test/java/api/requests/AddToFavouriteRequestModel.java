@@ -1,9 +1,9 @@
-package api.models;
+package api.requests;
 
 import lombok.Data;
 
 @Data
-public class AddToFavouriteModel {
+public class AddToFavouriteRequestModel {
 
     Integer id;
     String session;

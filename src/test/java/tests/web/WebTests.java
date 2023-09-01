@@ -9,8 +9,8 @@ import tests.TestBase;
 
 @Tag("web")
 @Owner("staya_kotyat")
-@Feature("Movies page")
-@DisplayName("Movies page")
+@Feature("UI: Movies page")
+@DisplayName("Web tests")
 public class WebTests extends TestBase {
 
     @Test

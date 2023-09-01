@@ -1,41 +1,63 @@
 package tests.api;
 
 
-import api.models.AddToFavouriteModel;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
+import static api.specs.Specs.*;
 
+import static com.codeborne.selenide.Selenide.open;
+import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("api")
 @Owner("staya_kotyat")
 @DisplayName("API tests")
-@Feature("Favourite movies")
+@Feature("API: Favourite movies")
 public class ApiTests extends TestBase {
+
 
     @Test
     @DisplayName("Add movie to favourites")
     void addMovieToFavourites(){
-        AddToFavouriteModel bodyModel = new AddToFavouriteModel();
-        bodyModel.setId(513760);
-        bodyModel.setSession("2f56cab92087821604_1708957377-721636760Le4PLzaRydPSLLUy1z82qg");
         given()
-                .contentType(ContentType.URLENC)
-                .formParams("id", 513760,
-                        "session", bodyModel.getSession()).relaxedHTTPSValidation()
+                .spec(favouriteRequestSpec)
                 .when()
-                .post("https://api2.ivi.ru/mobileapi/video/favourite/v5/add")
+                .post("/add")
                 .then()
-                .log().body()
-                .statusCode(200)
-                .body("result", is("ok"));
+                .spec(commonResponseSpec);
 
     }
+
+    @Test
+    @DisplayName("Delete movie from favourites")
+    void deleteMovieFromFavourites(){
+        given()
+                .spec(favouriteRequestSpec)
+                .when()
+                .post("/delete")
+                .then()
+                .spec(commonResponseSpec);
+
+    }
+
+    @Test
+    @DisplayName("Rate random movie from db/films.csv")
+    void rateRandomMovieFromDB(){
+
+        given()
+                .spec(rateRequestSpec)
+                .when()
+                .post()
+                .then().spec(commonResponseSpec);
+
+    }
+
+
+
 
 }
