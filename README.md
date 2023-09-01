@@ -36,14 +36,18 @@
   * С помощью Sausage list
 
 ## Запуск тестов из терминала
-Локальный запуск:
+Локальный запуск API и WebUI тестов:
 ```
-gradle clean test -Denv=local
+gradle clean api -Denv=local
+
+gradle clean web -Denv=local
 ```
 
-Удаленный запуск:
+Удаленный запуск API и WebUI тестов:
 ```
-gradle clean test -Denv=${remote}
+gradle clean api -Denv=remote
+
+gradle clean web -Denv=remote
 ```
 
 ### <img width="5%" title="Jenkins" src="images/logos/Jenkins.svg"> Запуск проекта в Jenkins
