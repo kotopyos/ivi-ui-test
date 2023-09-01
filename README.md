@@ -38,16 +38,16 @@
 ## Запуск тестов из терминала
 Локальный запуск API и WebUI тестов:
 ```
-gradle clean api -Denv=local
+gradle api -Denv=local
 
-gradle clean web -Denv=local
+gradle web -Denv=local
 ```
 
 Удаленный запуск API и WebUI тестов:
 ```
-gradle clean api -Denv=remote
+gradle api -Denv=remote
 
-gradle clean web -Denv=remote
+gradle web -Denv=remote
 ```
 
 ### <img width="5%" title="Jenkins" src="images/logos/Jenkins.svg"> Запуск проекта в Jenkins
