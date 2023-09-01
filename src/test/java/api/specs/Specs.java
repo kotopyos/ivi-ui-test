@@ -1,7 +1,6 @@
 package api.specs;
 
 import com.github.javafaker.Faker;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
@@ -55,18 +54,12 @@ public class Specs {
 
 
 
-    public static ResponseSpecification favouriteResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification commonResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .expectStatusCode(200)
             .expectBody("result", is("ok"))
             .build();
 
-    public static ResponseSpecification rateResponseSpec = new ResponseSpecBuilder()
-                .log(STATUS)
-                .log(BODY)
-                .expectStatusCode(200)
-                .expectBody("result", is("ok"))
-                .build();
-    
+
 }

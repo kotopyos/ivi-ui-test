@@ -1,12 +1,8 @@
 package tests.api;
 
 
-import api.responses.AddToFavouriteResponseModel;
-import api.responses.DeleteFromFavouriteResponseModel;
-import api.responses.RateResponseModel;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -21,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Tag("api")
 @Owner("staya_kotyat")
 @DisplayName("API tests")
-@Feature("Favourite movies")
+@Feature("API: Favourite movies")
 public class ApiTests extends TestBase {
 
 
@@ -33,7 +29,7 @@ public class ApiTests extends TestBase {
                 .when()
                 .post("/add")
                 .then()
-                .spec(favouriteResponseSpec);
+                .spec(commonResponseSpec);
 
     }
 
@@ -45,7 +41,7 @@ public class ApiTests extends TestBase {
                 .when()
                 .post("/delete")
                 .then()
-                .spec(favouriteResponseSpec);
+                .spec(commonResponseSpec);
 
     }
 
@@ -57,7 +53,7 @@ public class ApiTests extends TestBase {
                 .spec(rateRequestSpec)
                 .when()
                 .post()
-                .then().spec(rateResponseSpec);
+                .then().spec(commonResponseSpec);
 
     }
 
