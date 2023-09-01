@@ -1,4 +1,4 @@
-## Проект UI автотестов ivi.ru
+## Web UI и API автотесты ivi.ru
 
 <p align="center">
 <a href="https://www.ivi.ru/"><img src="images/logos/ivi-logo.png"/></a>
