@@ -54,7 +54,7 @@ gradle web -Denv=remote
 
 ### [Job](https://jenkins.autotests.cloud/job/c20-Stayarr-ivi-ui-tests/)
 
-##### При нажатии на "Собрать сейчас" начнется сборка тестов и их прохождение, через виртуальную машину в Selenide.
+##### При нажатии на "Собрать сейчас" и выбора платформы (UI/API) начнется сборка тестов и их прохождение, через виртуальную машину в Selenide.
 ![This is an image](images/screenshots/jenkins_screenshot.png)
 
 <!-- Allure report -->
