@@ -4,7 +4,7 @@
 <a href="https://www.ivi.ru/"><img src="images/logos/ivi-logo.png"/></a>
 
 ## Содержание
-- [Что проверяем](#что-проверяем)
+- [Что проверяем](#что-проверяем-ui)
 - [Запуск из терминала](#запуск-тестов-из-терминала)
 - [Запуск проекта в Jenkins](#job)
 - [Allure report](#-allure-report)
