@@ -61,8 +61,7 @@ gradle web -Denv=remote
 
 ### <img width="5%" title="Allure Report" src="images/logos/Allure.svg"> Allure report
 ### [Report](https://jenkins.autotests.cloud/job/c20-Stayarr-ivi-ui-tests/allure/)
-##### После прохождения тестов, результаты можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins
-##### Отчет о пройденных тестах уже доступен.
+##### Отчет результатов теста можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins
 ![This is an image](images/screenshots/allure_dashboard_screenshot.png)
 
 ##### Во вкладке Graphs можно посмотреть графики о прохождении тестов, по их приоритезации, по времени прохождения и др.
