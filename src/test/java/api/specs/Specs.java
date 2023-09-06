@@ -7,16 +7,17 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 import static helpers.CustomApiListener.withCustomTemplates;
-import static api.utils.RandomFilmExtractor.randomFilmNumber;
+import static api.utils.RandomFilmUtil.randomFilmNumber;
 import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
 import static org.hamcrest.Matchers.is;
+import static tests.TestBase.apiConfig;
 
 public class Specs {
 
     static Faker faker = new Faker();
-    private static Integer randomFilmNum;
+    private static final Integer randomFilmNum;
     static {
         try {
             randomFilmNum = randomFilmNumber();
@@ -32,10 +33,10 @@ public class Specs {
                     .log().headers()
                     .log().body()
                     .contentType(ContentType.URLENC)
-                    .baseUri("https://api2.ivi.ru/mobileapi")
+                    .baseUri(apiConfig.getBaseApiUrl())
                     .basePath("/video/favourite/v5")
                     .formParams("id", randomFilmNum,
-                            "session", "2f56cab92087821604_1708957377-721636760Le4PLzaRydPSLLUy1z82qg") //todo Add config.api
+                            "session", apiConfig.getSession())
                     .relaxedHTTPSValidation();
 
 

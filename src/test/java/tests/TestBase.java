@@ -1,8 +1,7 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import configs.ConfigApi;
+import configs.ApiConfig;
 import configs.WebDriverConfig;
 import drivers.WebDriverProvider;
 import helpers.Attach;
@@ -20,13 +19,16 @@ import static com.codeborne.selenide.Selenide.open;
 
 
 public class TestBase {
+    public static WebDriverConfig webConfig = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    public static ApiConfig apiConfig = ConfigFactory.create(ApiConfig.class, System.getProperties());
+
     public MainPage mainPage = new MainPage();
     public MoviesPage moviesPage = new MoviesPage();
     public TestData data = new TestData();
 
     @BeforeAll
     static void setUp() {
-        WebDriverProvider.setConfig();
+        WebDriverProvider.setWebConfig();
 
     }
 

@@ -5,17 +5,18 @@ import configs.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static tests.TestBase.webConfig;
+
 public class WebDriverProvider {
 
-    public static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
 
-    public static void setConfig() {
+    public static void setWebConfig() {
 
-        Configuration.baseUrl = WebDriverProvider.config.getBaseUrl();
-        Configuration.browser = WebDriverProvider.config.getBrowserName();
-        Configuration.browserVersion = WebDriverProvider.config.getBrowserVersion();
-        Configuration.browserSize = WebDriverProvider.config.getBrowserSize();
-        String remoteUrl = WebDriverProvider.config.getRemoteUrl();
+        Configuration.baseUrl = webConfig.getBaseUrl();
+        Configuration.browser = webConfig.getBrowserName();
+        Configuration.browserVersion = webConfig.getBrowserVersion();
+        Configuration.browserSize = webConfig.getBrowserSize();
+        String remoteUrl = webConfig.getRemoteUrl();
         if (remoteUrl != null) {
             Configuration.remote = remoteUrl;
         }
