@@ -1,10 +1,11 @@
-## Проект UI автотестов ivi.ru
+#### ***Структура API тестов еще не доделана, но тесты работают. Рекоммендуется запускать через Job'у в Jenkins**
+## Web UI и API автотесты ivi.ru
 
 <p align="center">
 <a href="https://www.ivi.ru/"><img src="images/logos/ivi-logo.png"/></a>
 
 ## Содержание
-- [Что проверяем](#что-проверяем)
+- [Что проверяем](#что-проверяем-ui)
 - [Запуск из терминала](#запуск-тестов-из-терминала)
 - [Запуск проекта в Jenkins](#job)
 - [Allure report](#-allure-report)
@@ -27,41 +28,46 @@
 </p>
 <!-- Тест кейсы -->
 
-### Что проверяем
+### Что проверяем. UI
 * Проверка фильтра фильмов:
   * С помощью Suggestion list
   * По рейтингу
   * По жанру с помощью карусели
   * По жанру с помощью списка
   * С помощью Sausage list
+ ### Что проверяем. API
+ * Проверка списка избраных:
+   * Добавление в избранное
+   * Удаления из избранного
+ * Проверка выставления оценки 
 
 ## Запуск тестов из терминала
 Локальный запуск API и WebUI тестов:
 ```
-gradle clean api -Denv=local
+gradle api -Denv=local
 
-gradle clean web -Denv=local
+gradle web -Denv=local
 ```
 
 Удаленный запуск API и WebUI тестов:
 ```
-gradle clean api -Denv=remote
+gradle api -Denv=remote
 
-gradle clean web -Denv=remote
+gradle web -Denv=remote
 ```
 
 ### <img width="5%" title="Jenkins" src="images/logos/Jenkins.svg"> Запуск проекта в Jenkins
 
 ### [Job](https://jenkins.autotests.cloud/job/c20-Stayarr-ivi-ui-tests/)
 
-##### При нажатии на "Собрать сейчас" начнется сборка тестов и их прохождение, через виртуальную машину в Selenide.
+##### При нажатии на "Собрать сейчас" и выбора платформы (UI/API) начнется сборка тестов и их прохождение, через виртуальную машину в Selenide.
 ![This is an image](images/screenshots/jenkins_screenshot.png)
 
 <!-- Allure report -->
 
 ### <img width="5%" title="Allure Report" src="images/logos/Allure.svg"> Allure report
 ### [Report](https://jenkins.autotests.cloud/job/c20-Stayarr-ivi-ui-tests/allure/)
-##### После прохождения тестов, результаты можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins
+##### Результаты тестов можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins
 ![This is an image](images/screenshots/allure_dashboard_screenshot.png)
 
 ##### Во вкладке Graphs можно посмотреть графики о прохождении тестов, по их приоритезации, по времени прохождения и др.
