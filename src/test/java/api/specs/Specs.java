@@ -50,7 +50,7 @@ public class Specs {
             .basePath("/video/user/rate/v5/")
             .formParams("id", randomFilmNum,
                     "rate", faker.number().numberBetween(1, 10),
-                    "session", "2f56cab92087821604_1708957377-721636760Le4PLzaRydPSLLUy1z82qg") //todo Add config.api
+                    "session", "2f56cab92087821604_1708957377-721636760Le4PLzaRydPSLLUy1z82qg")
             .relaxedHTTPSValidation();
 
 
